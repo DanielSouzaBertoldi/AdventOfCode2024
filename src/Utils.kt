@@ -9,6 +9,11 @@ import kotlin.io.path.readText
 fun readInput(directory: String, name: String) = Path("src/$directory/$name.txt").readText().trim().lines()
 
 /**
+ * Read the entire file from the given input txt file.
+ */
+fun readText(directory: String, name: String) = Path("src/$directory/$name.txt").readText().trim()
+
+/**
  * Converts string to md5 hash.
  */
 fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray()))
